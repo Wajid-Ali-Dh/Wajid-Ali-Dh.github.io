@@ -44,9 +44,36 @@ body {
 }
 .sidebar-links a {
     color: #fff;
-    font-size: 1.5rem;
     margin: 0 0.5rem;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+}
+.sidebar-links svg {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.hero {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    color: #232946;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    color: #222;
+}
+.hero a {
+    color: #3949ab;
+    text-decoration: underline;
+    font-weight: 500;
 }
 .cv-btn {
     display: inline-block;
