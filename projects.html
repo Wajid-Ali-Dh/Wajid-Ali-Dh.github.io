@@ -3,43 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Wajid Ali</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Projects | Academic Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/yourfontawesomekit.js" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <img src="assets/img/photo.jpeg" alt="Wajid Ali Profile" class="profile-pic">
-            <h1>Wajid Ali</h1>
-            <h3>AI Engineer | Mechatronics | Computer Vision</h3>
-            <div class="sidebar-links">
-                <a href="mailto:wajid.ali.dh@gmail.com" title="Email">📧</a>
-                <a href="https://www.linkedin.com/in/link" title="LinkedIn" class="icon-linkedin" aria-label="LinkedIn"></a>
-                <a href="https://github.com/Wajid-Ali-Dh" title="GitHub" class="icon-github" aria-label="GitHub"></a>
+    <header class="sticky-header" role="banner">
+        <nav aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="reports.html">Reports & Thesis</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button id="mode-toggle" aria-label="Toggle light/dark mode"><i class="fas fa-moon"></i></button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="projects-section" aria-label="Projects">
+            <h1>Projects</h1>
+            <input type="text" id="project-search" placeholder="Search projects..." aria-label="Search projects">
+            <div id="projects-list">
+                <!-- Assistive Feeding System -->
+                <div class="project-card" data-tech="Python,Raspberry Pi,MediaPipe,OpenCV">
+                    <h2>Assistive Feeding System</h2>
+                    <p>Designed and developed a 6-DOF robotic manipulator to feed patients with limited mobility, integrating face detection and 3D facial landmark localization using MediaPipe and OpenCV. The system features a vision module for mouth tracking, a scooping and delivery mechanism, and is fully embedded on a Raspberry Pi with wireless control. Offers both passive and active feeding modes for patient assistance.</p>
+                    <p><strong>Key Technologies Used:</strong> Python, Raspberry Pi, MediaPipe, OpenCV, Monocular Depth Estimation, 3D Printing (PLA+), FDM, Motor Control</p>
+                    <div class="project-gallery">
+                        <video controls width="320">
+                            <source src="videos/Assistive Feeding System.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <!-- AI-Based Defect Detection and Adaptive Manufacturing Correction System -->
+                <div class="project-card" data-tech="Python,YOLOv8,OpenCV,Streamlit">
+                    <h2>AI-Based Defect Detection and Adaptive Manufacturing Correction System</h2>
+                    <p>Built a real-time YOLOv8-based computer vision system to detect manufacturing defects such as scratches, tool wear, and misalignment from images, videos, and live camera feeds. Integrated an adaptive decision module with simulated IMU/encoder data for process correction or pausing. Developed an interactive Streamlit dashboard for live monitoring and smart manufacturing simulations.</p>
+                    <p><strong>Key Technologies Used:</strong> Python, YOLOv8, OpenCV, Streamlit, Sensor Fusion, IMU Simulation, Encoder Data Processing</p>
+                    <div class="project-gallery">
+                        <img src="images/AI-Based Defect Detection and Adaptive Manufacturing Correction System.gif" alt="Defect Detection Demo" style="max-width:320px;">
+                    </div>
+                </div>
+
+                <!-- Drone Path Planning and Dynamic Obstacle Avoidance using RRT* -->
+                <div class="project-card" data-tech="Python,RRT*,NumPy,Matplotlib">
+                    <h2>Drone Path Planning and Dynamic Obstacle Avoidance using RRT*</h2>
+                    <p>Simulated autonomous UAV navigation in a 2D environment using the RRT* algorithm for optimal path planning in dynamic, cluttered spaces. Features challenging maze-like obstacles, continuous path refinement, and full visualizations of the planning process from tree growth to goal execution. Implemented in Python with animated simulations for clear demonstration.</p>
+                    <p><strong>Key Technologies Used:</strong> Python, RRT*, Path Planning Algorithms, NumPy, Matplotlib, ImageIO</p>
+                    <div class="project-gallery">
+                        <img src="images/Drone Path Planning and Dynamic Obstacle Avoidance using RRT.gif" alt="Drone Path Planning Demo" style="max-width:320px;">
+                    </div>
+                </div>
+
+                <!-- Agri Bot -->
+                <div class="project-card" data-tech="Robotics Design,Embedded Systems,Autonomous Navigation">
+                    <h2>Agri Bot</h2>
+                    <p>Designed and built an autonomous fruit-harvesting robot with a custom plucking mechanism for the 2022 National Engineering and Robotics Competition (NERC), the country’s largest robotics event. Advanced to the quarter-finals, showcasing innovative mechanical design and autonomous navigation in a simulated agricultural environment.</p>
+                    <p><strong>Key Technologies Used:</strong> Robotics Design, Embedded Systems, Autonomous Navigation, Sensor Integration, CAD</p>
+                </div>
+
+                <!-- Mobile Human Intrusion Detection System -->
+                <div class="project-card" data-tech="NVIDIA Jetson,Python,YOLO,OpenCV,Edge AI">
+                    <h2>Mobile Human Intrusion Detection System</h2>
+                    <p>Developed an NVIDIA Jetson-powered vision system for tunnel inspection, capable of detecting unauthorized humans, animals, vehicles without number plates, and unsafe maintenance practices (missing helmets or vests). Validated the custom object detection models on 60,000 images and 600 videos with dynamic lighting conditions, enabling real-time alerts and automated evidence capture with 30 seconds pre- and post-event recording. Designed for deployment across multiple tunnel entry and exit points as part of a government infrastructure security project.</p>
+                    <p><strong>Key Technologies Used:</strong> NVIDIA Jetson, Python, YOLO-based Object Detection, OpenCV, Real-time Video Processing, Edge AI, Battery-powered Systems</p>
+                </div>
             </div>
-            <a href="assets/docs/Wajid_Ali_CV.pdf" class="cv-btn" target="_blank">Download CV</a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
-            </nav>
-        </aside>
-        <main class="main-content">
-            <section id="projects">
-                <h2>Projects</h2>
-                <ul>
-                    <li><strong>Assistive Feeding System</strong>: 6 DOF robotic manipulator for feeding patients. <a href="#">Demo</a></li>
-                    <li><strong>AI-Based Defect Detection</strong>: Real-time computer vision system using YOLOv8, Streamlit dashboard.</li>
-                    <li><strong>Railway Track Data & SLAM</strong>: Sensor fusion, SLAM for 3D railway environment.</li>
-                    <li><strong>Path Planning of Drone</strong>: RRT* algorithm, deep learning-based sampling.</li>
-                    <li><strong>PID Controller for Robot</strong>: ESP32-based robot control.</li>
-                    <li><strong>Agri Bot</strong>: Autonomous fruit plucking bot for NERC 22.</li>
-                </ul>
-            </section>
-        </main>
-    </div>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2025 Wajid Ali. Powered by GitHub Pages.</p>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
     </footer>
 </body>
 </html>

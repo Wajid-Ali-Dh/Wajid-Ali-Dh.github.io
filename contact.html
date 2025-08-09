@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Academic Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/yourfontawesomekit.js" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="sticky-header" role="banner">
+        <nav aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="reports.html">Reports & Thesis</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button id="mode-toggle" aria-label="Toggle light/dark mode"><i class="fas fa-moon"></i></button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-section" aria-label="Contact">
+            <h1>Contact</h1>
+            <ul class="contact-links">
+                <li><a href="mailto:your.email@example.com" aria-label="Email"><i class="fas fa-envelope"></i> your.email@example.com</a></li>
+                <li><a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a></li>
+            </ul>
+            <form id="contact-form" aria-label="Contact Form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+            </form>
+            <div id="form-status" role="status" aria-live="polite"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
