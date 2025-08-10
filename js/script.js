@@ -16,7 +16,7 @@ const setTheme = (theme) => {
     localStorage.setItem('theme', theme);
     modeToggle.innerHTML = theme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
 };
-const savedTheme = localStorage.getItem('theme') || 'dark';
+const savedTheme = localStorage.getItem('theme') || 'light';
 setTheme(savedTheme);
 modeToggle.addEventListener('click', () => {
     const current = document.documentElement.getAttribute('data-theme');
