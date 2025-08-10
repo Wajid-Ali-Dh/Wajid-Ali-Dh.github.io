@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Journey | Wajid Ali</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="images/profile.jpg">
-    <script src="https://kit.fontawesome.com/yourfontawesomekit.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -23,73 +25,84 @@
         </nav>
     </header>
     <main>
-        <section class="journey-intro" aria-label="Journey" style="text-align:center;">
+        <section class="journey-intro" aria-label="Journey">
             <h1>My Journey</h1>
-            <div style="margin:2em auto;max-width:600px;">
-                <div style="display:flex;justify-content:center;gap:20px;">
-                    <button id="education-btn" class="journey-btn" style="padding:10px 30px;font-size:1.1em;cursor:pointer;">Education</button>
-                    <button id="experience-btn" class="journey-btn" style="padding:10px 30px;font-size:1.1em;cursor:pointer;">Experience</button>
-                </div>
-                <div id="education-section" style="display:block;text-align:left;margin-top:2em;">
-                    <h2>Education</h2>
-                    <h3>National University of Sciences and Technology — NUST</h3>
-                    <p><strong>Bachelor of Mechatronics Engineering</strong> (accredited by Washington Accord).<br>
-                    <em>September 2019 - June 2023</em></p>
-                    <ul>
-                        <li>Rector Gold Medalist for best final-year project in the department of Mechatronics Engineering.</li>
-                        <li>Awarded the Rector Gold Medal for the best Bachelor of Mechatronic Engineering project in session 2023.</li>
-                        <li>Received IGNITE funding for my senior year design project.</li>
-                        <li>Winner, COMPPEC 2023 for Assistive Feeding System in Electromechanical Systems category.</li>
-                        <li>Featured on national television (ARY, Samaa, Express) for innovative FYP solutions.</li>
-                    </ul>
-                </div>
-                <div id="experience-section" style="display:none;text-align:left;margin-top:2em;">
-                    <h2>Experience</h2>
-                    <h3>Thingtrax</h3>
-                    <p><strong>Role:</strong> AI Engineer<br><em>May 2025– Present</em></p>
-                    <ul>
-                        <li>Developing end-to-end computer vision systems for label validation, product counting, and defect detection in the food and beverage industry.</li>
-                        <li>Integrating AI-driven inspection results with PLC actions for real-time manufacturing automation.</li>
-                        <li>Using FastAPI to develop REST APIs, AWS S3 for data storage and retrieval, and Azure IoT Hub with MQTT for device communication to design, deploy and maintain scalable cloud-connected manufacturing solutions.</li>
-                    </ul>
-                    <h3>Kodifly</h3>
-                    <p><strong>Role:</strong> Computer Vision Engineer<br><em>July 2024– April 2025</em></p>
-                    <ul>
-                        <li>Developed sensor fusion-based solutions using Lidar and machine vision cameras for intrusion detection and tracking.</li>
-                        <li>Leveraged ROS, Python, Nvidia Jetson, and DeepStream SDK platforms for automation in transportation infrastructure and real-time safety monitoring.</li>
-                        <li>Deployed deep learning models on NVIDIA Jetson devices using Docker for production environments.</li>
-                        <li>Converted PyTorch models to TensorRT, achieving improved FPS for real-time inference.</li>
-                    </ul>
-                    <h3>STRADA IMAGING</h3>
-                    <p><strong>Role:</strong> Computer Vision and Machine Learning Engineer<br><em>Aug. 2023- May. 2024</em></p>
-                    <ul>
-                        <li>Designed machine learning pipelines for lane line detection and road defect classification.</li>
-                        <li>Utilized CVAT for data annotation and training models for a 15-class road network dataset.</li>
-                        <li>Implemented algorithms to measure rutting depth from stitched images of 200m sections.</li>
-                    </ul>
-                    <h3>PAK ELECTRON LIMITED—PEL</h3>
-                    <p><strong>Role:</strong> Engineering Intern– Assembly Line Optimization<br><em>Aug 2022– Sept 2022</em></p>
-                    <ul>
-                        <li>Monitored tack time and optimized production line balancing, achieving significant delay reductions.</li>
-                        <li>Automated digital counter systems to track production progress and meet demand targets.</li>
-                        <li>Enhanced workflow efficiency for deep freezer and water dispenser departments.</li>
-                    </ul>
-                </div>
+            <div class="journey-buttons">
+                <button id="education-btn" class="journey-btn active">Education</button>
+                <button id="experience-btn" class="journey-btn">Experience</button>
+            </div>
+            
+            <div id="education-section" class="journey-content">
+                <h2>Education</h2>
+                <h3>National University of Sciences and Technology — NUST</h3>
+                <p><strong>Bachelor of Mechatronics Engineering</strong> (accredited by Washington Accord).<br>
+                <em>September 2019 - June 2023</em></p>
+                <ul>
+                    <li>Rector Gold Medalist for best final-year project in the department of Mechatronics Engineering.</li>
+                    <li>Awarded the Rector Gold Medal for the best Bachelor of Mechatronic Engineering project in session 2023.</li>
+                    <li>Received IGNITE funding for my senior year design project.</li>
+                    <li>Winner, COMPPEC 2023 for Assistive Feeding System in Electromechanical Systems category.</li>
+                    <li>Featured on national television (ARY, Samaa, Express) for innovative FYP solutions.</li>
+                </ul>
+            </div>
+            
+            <div id="experience-section" class="journey-content" style="display:none;">
+                <h2>Experience</h2>
+                
+                <h3>Thingtrax</h3>
+                <p><strong>Role:</strong> AI Engineer<br><em>May 2025– Present</em></p>
+                <ul>
+                    <li>Developing end-to-end computer vision systems for label validation, product counting, and defect detection in the food and beverage industry.</li>
+                    <li>Integrating AI-driven inspection results with PLC actions for real-time manufacturing automation.</li>
+                    <li>Using FastAPI to develop REST APIs, AWS S3 for data storage and retrieval, and Azure IoT Hub with MQTT for device communication to design, deploy and maintain scalable cloud-connected manufacturing solutions.</li>
+                </ul>
+                
+                <h3>Kodifly</h3>
+                <p><strong>Role:</strong> Computer Vision Engineer<br><em>July 2024– April 2025</em></p>
+                <ul>
+                    <li>Developed sensor fusion-based solutions using Lidar and machine vision cameras for intrusion detection and tracking.</li>
+                    <li>Leveraged ROS, Python, Nvidia Jetson, and DeepStream SDK platforms for automation in transportation infrastructure and real-time safety monitoring.</li>
+                    <li>Deployed deep learning models on NVIDIA Jetson devices using Docker for production environments.</li>
+                    <li>Converted PyTorch models to TensorRT, achieving improved FPS for real-time inference.</li>
+                </ul>
+                
+                <h3>STRADA IMAGING</h3>
+                <p><strong>Role:</strong> Computer Vision and Machine Learning Engineer<br><em>Aug. 2023- May. 2024</em></p>
+                <ul>
+                    <li>Designed machine learning pipelines for lane line detection and road defect classification.</li>
+                    <li>Utilized CVAT for data annotation and training models for a 15-class road network dataset.</li>
+                    <li>Implemented algorithms to measure rutting depth from stitched images of 200m sections.</li>
+                </ul>
+                
+                <h3>PAK ELECTRON LIMITED—PEL</h3>
+                <p><strong>Role:</strong> Engineering Intern– Assembly Line Optimization<br><em>Aug 2022– Sept 2022</em></p>
+                <ul>
+                    <li>Monitored tack time and optimized production line balancing, achieving significant delay reductions.</li>
+                    <li>Automated digital counter systems to track production progress and meet demand targets.</li>
+                    <li>Enhanced workflow efficiency for deep freezer and water dispenser departments.</li>
+                </ul>
             </div>
         </section>
-        <script>
+    </main>
+    <footer>
+        <p>&copy; 2025 Wajid Ali. All rights reserved.</p>
+    </footer>
+    
+    <script>
         // Toggle sections
         document.addEventListener('DOMContentLoaded', function() {
             const eduBtn = document.getElementById('education-btn');
             const expBtn = document.getElementById('experience-btn');
             const eduSection = document.getElementById('education-section');
             const expSection = document.getElementById('experience-section');
+            
             eduBtn.addEventListener('click', function() {
                 eduSection.style.display = 'block';
                 expSection.style.display = 'none';
                 eduBtn.classList.add('active');
                 expBtn.classList.remove('active');
             });
+            
             expBtn.addEventListener('click', function() {
                 eduSection.style.display = 'none';
                 expSection.style.display = 'block';
@@ -97,10 +110,6 @@
                 eduBtn.classList.remove('active');
             });
         });
-        </script>
-    </main>
-    <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
-    </footer>
+    </script>
 </body>
 </html>
