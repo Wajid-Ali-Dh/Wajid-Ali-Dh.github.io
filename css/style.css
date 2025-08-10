@@ -206,6 +206,12 @@ main {
     color: var(--text);
     max-width: 800px;
     margin: 0 auto 2rem auto;
+    text-align: center;
+}
+
+/* Ensure description text is centered */
+.about-section div[style*="text-align: center"] p {
+    text-align: center !important;
 }
 
 /* Contact Info */
